@@ -1,0 +1,12 @@
+<resources>
+    <style name="Theme.WAVE" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">#090c10</item>
+        <item name="android:navigationBarColor">#11161c</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#9af3ad</item>
+    </style>
+    <string name="app_name">WAVE</string>
+</resources>

@@ -1,0 +1,60 @@
+WAVE ANDROID 2.4 — ANDROID STUDIO PROJEKT
+=========================================
+
+WICHTIG: Dieses ZIP enthaelt den Quellcode fuer eine echte Android-App,
+aber noch keine vorgebaute APK. Ein Android SDK/Emulator ist in der
+Erstellungsumgebung nicht verfuegbar. Deshalb konnte die App nicht auf
+einem realen Android-Handy getestet werden.
+
+APK ERSTELLEN (Windows)
+1. Installiere Android Studio von https://developer.android.com/studio
+2. Entpacke das WAVE_Android_2.4.zip komplett.
+3. Android Studio > Open > Ordner WAVE_Android_2.4 auswaehlen.
+4. Bei Bedarf Android SDK Platform 35 und Build Tools durch Android Studio installieren.
+5. Gradle Sync ausfuehren. Internet ist beim ersten Mal erforderlich.
+6. Build > Build Bundle(s) / APK(s) > Build APK(s).
+7. Die debug APK findest du unter:
+   app/build/outputs/apk/debug/app-debug.apk
+8. APK auf dein Android-Handy kopieren und installieren.
+   Android fragt evtl. nach Erlaubnis fuer die Installation dieser APK.
+
+Alternativ im Projektverzeichnis: gradlew.bat assembleDebug
+JAVA 17 erforderlich. Das beiliegende gradle-wrapper.jar ist ein
+selbst erstellter, offener Bootstrap, der die offizielle Gradle 8.11.1
+Distribution von services.gradle.org herunterlaedt. Der eigentliche
+Gradle Build verwendet die angegebenen Versionen und Google Maven.
+
+WAS ENTHALTEN IST
+- Urspruengliches WAVE-Design aus WAVE 2.2: Songs, Playlists,
+  Favoriten, Cover, WAVE Studio, Themes, Playlist-Dateien, Statistiken.
+- WebView wird sicher aus eingebauten Assets per HTTPS-Origin geladen.
+- MP3s, die man in WAVE hochlaedt, werden fuer native Wiedergabe in den
+  privaten App-Speicher uebertragen.
+- Media3/ExoPlayer MediaSessionService fuer Musik bei gesperrtem Bildschirm,
+  Hintergrundwiedergabe, Android-Benachrichtigung und Headset-Tasten.
+- Audioanpassung ueber den Android Hardware Equalizer / BassBoost und
+  Tempo. Manche Effekte koennen je nach Geraet nicht verfuegbar sein.
+- Playlist-Export ueber den systemeigenen Android-Speicherdialog.
+
+WICHTIGE GRENZEN
+- Nicht jede Android Hardware bietet 10 EQ Baender oder +48 dB Bass.
+  Android begrenzt das EQ-Signal auf die Bandgrenzen der Hardware.
+- Reverb, echte Stimmentrennung, exakte Pitch-Algorithmen und ein
+  zertifizierter Limiter sind in der Android-Playback-Engine nicht enthalten.
+- Die Wiedergabe mit gesperrtem Bildschirm wird vom MediaSessionService
+  technisch unterstuetzt, wurde aber noch NICHT auf einem Handy getestet.
+- Web-Statistiken fuer sehr lange Hintergrund-Wiedergaben koennen
+  noch abweichen.
+- App-Daten liegen lokal auf diesem Geraet. Bereits im Browser hochgeladene
+  MP3s werden NICHT automatisch in die installierte App uebernommen.
+  Lade sie in WAVE Android erneut hoch.
+- Android und Browser haben getrennten Speicher; die Dateien bleiben nach
+  normalem App-Neustart erhalten, aber NICHT nach Deinstallation.
+- Zum Teilen der Playlist mit MP3s nur Musik verwenden, die du teilen darfst.
+- Hohe Bass-Verstaerkung kann verzerren oder Hoergefaehrdung verursachen.
+  Starte mit geringer Lautstaerke; Hardware-EQ garantiert keinen Limiter.
+- Sicherheitschecks reduzieren Risiken beim Dateiimport, bieten aber keinen
+  absoluten Virenschutz. Importiere nur Dateien vertrauenswuerdiger Herkunft.
+
+Fuer Nutzer: WAVE-Android ist ein erstes natives Quellcode-Projekt,
+nicht ein fertig getestetes App-Store-Release.

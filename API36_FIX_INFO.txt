@@ -1,0 +1,9 @@
+WAVE Android 2.4 — API 36 Build-Fix
+
+app/build.gradle: compileSdk 35 -> 36
+build.gradle: Android Gradle Plugin 8.9.2 -> 8.10.1
+Gradle Wrapper remains 8.11.1, targetSdk remains 35, minSdk remains 26.
+
+In Android Studio install Android SDK Platform 36 (Settings > Languages & Frameworks > Android SDK > SDK Platforms).
+Open the extracted WAVE_Android_2.4 project, Gradle Sync, then Build APK(s).
+This source was adjusted and ZIP-validated; APK build was not run here because Android SDK is unavailable.

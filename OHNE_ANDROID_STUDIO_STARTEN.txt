@@ -1,0 +1,38 @@
+WAVE ANDROID - OHNE ANDROID STUDIO
+================================
+
+ZIEL: Du laedst den WAVE-Projektordner auf GitHub hoch. GitHub baut die
+APK automatisch. Auf deinem PC muss kein Android Studio installiert sein.
+Du brauchst einen GitHub-Account und Internetzugang.
+
+1. ZIP entpacken und den Ordner WAVE_Android_GitHub_APK oeffnen.
+2. Im Browser https://github.com/new oeffnen und anmelden.
+3. Repository-Name: WAVE-Android. Am besten "Private" waehlen.
+   KEINE README oder Gitignore beim Erstellen auswaehlen.
+4. Auf "Create repository" klicken.
+5. Auf "uploading an existing file" klicken (alternativ "Add file > Upload files").
+6. Im Windows-Explorer den INHALT von WAVE_Android_GitHub_APK
+   markieren (Strg+A), also app, gradle, .github usw.
+   Diese Inhalte per Drag-and-drop in das GitHub-Uploadfeld ziehen.
+   Wichtig: .github/workflows/wave-android-apk.yml muss im Stammordner
+   des Repositorys liegen, NICHT in einem zusaetzlichen Unterordner.
+7. Auf "Commit changes" klicken.
+8. Auf dem GitHub-Repository den Tab "Actions" anklicken. Wenn Aktionen
+   deaktiviert sind, dort aktivieren. Der Workflow sollte automatisch
+   beim Upload starten. Alternativ "WAVE Android - APK bauen" >
+   "Run workflow" > "Run workflow" klicken.
+9. Sobald der Workflow GRUEN ist: Workflow oeffnen, unter "Artifacts"
+   auf "WAVE-Android-APK" klicken.
+10. Die heruntergeladene ZIP entpacken. Darin liegt app-debug.apk.
+    Diese APK auf dein Android-Handy uebertragen und installieren.
+
+WICHTIG
+- WAVE Android ist ein Testprojekt, noch keine getestete Release-APK.
+- Fehler beim Build: "Actions" > fehlgeschlagener Lauf >
+  "APK erstellen" > rote Fehlermeldung kopieren und im Chat schicken.
+- Der Build laeuft auf GitHub, nicht auf deinem Computer.
+- Wenn kein GitHub-Account gewuenscht ist, kann man alternativ die
+  WAVE-Webversion direkt im Handy-Browser verwenden. Diese hat jedoch
+  keine garantierte Hintergrundwiedergabe bei gesperrtem Bildschirm.
+- Beim sehr starken Bass immer mit geringer Lautstaerke starten.
+- Nur Musikdateien weitergeben, die du auch teilen darfst.
