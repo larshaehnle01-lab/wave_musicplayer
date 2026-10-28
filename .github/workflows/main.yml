@@ -17,17 +17,19 @@ jobs:
       - name: Projekt laden
         uses: actions/checkout@v4
 
-      - name: Java einrichten
+      - name: Java 17 einrichten
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
 
       - name: Android SDK einrichten
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
 
       - name: Android API 36 installieren
-        run: sdkmanager --install "platforms;android-36" "build-tools;35.0.0"
+        run: |
+          sdkmanager --install "platforms;android-36"
+          sdkmanager --install "build-tools;35.0.0"
 
       - name: Gradle einrichten
         uses: gradle/actions/setup-gradle@v4
@@ -42,3 +44,4 @@ jobs:
         with:
           name: WAVE-Android-APK
           path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
